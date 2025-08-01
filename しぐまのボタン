@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>しぐまのボタン</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background: linear-gradient(to bottom, #aee1f9, #e6faff);
+      animation: wave 10s ease-in-out infinite;
+      text-align: center;
+      padding: 40px 10px;
+      overflow: hidden;
+    }
+
+    @keyframes wave {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #cc6699;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px white;
+    }
+
+    .vtuber-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 15px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 16px 24px;
+      background-color: #ff99cc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>しぐまのボタン</h1>
+
+  <img src="無題369_20250717230001.png" alt="しぐまのアイコン" class="vtuber-icon">
+
+  <div class="button-container">
+    <button onclick="playSound('AudioCutter_怖すぎるううう.mp3')">怖すぎるううう</button>
+    <button onclick="playSound('まっずいこれ.mp3')">まっずいこれ</button>
+    <button onclick="playSound('ヤバすぎるこれ.mp3')">ヤバすぎるこれ</button>
+  </div>
+
+  <audio id="player" src=""></audio>
+
+  <script>
+    function playSound(file) {
+      const audio = document.getElementById('player');
+      audio.src = file;
+      audio.play();
+    }
+  </script>
+</body>
+</html>
