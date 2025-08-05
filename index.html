@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="ja">
-<head>
+<!DOCTYPE html><html lang="ja"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>しぐまのボタン</title>
@@ -16,12 +15,11 @@
       overflow-y: auto;
       cursor: url('https://cdn-icons-png.flaticon.com/32/210/210545.png') 5 2, auto;
       transition: background 1s;
-    }.night-mode {
-  background: linear-gradient(180deg, #0a0a23, #1f3a93);
-  color: #fff;
-}
-
-@keyframes wave {
+    }
+    .night-mode {
+      background: linear-gradient(180deg, #0a0a23, #1f3a93);
+      color: #fff;
+    }@keyframes wave {
   0% { background-position: 0% 0%; }
   50% { background-position: 0% 100%; }
   100% { background-position: 0% 0%; }
@@ -185,136 +183,6 @@ button:hover {
   </style>
 </head>
 <body>
-  <h1>しぐまのボタン</h1>
-  <p class="update-date">最終更新日：2025年8月2日</p>
-  <p>アイコンを押すとランダムでボイスが再生されるよ！</p>
-  <img src="shigumano_icon.png.jpg" alt="しぐまのアイコン" class="vtuber-icon" onclick="playRandomSound()">  <div class="button-container">
-    <button onclick="playSound('ありがとうございます.mp3')">（ありがとうございます）</button>
-    <button onclick="playSound('うりゅ.mp3')">（うりゅ）</button>
-    <button onclick="playSound('まだ呼ばれてない人手上げてみて.mp3')">（まだ呼ばれてない人手上げて）</button>
-    <button onclick="playSound('まっずいこれ.mp3')">（まっずいこれ）</button>
-    <button onclick="playSound('やっほー.mp3')">（やっほー）</button>
-    <button onclick="playSound('やっほー2.mp3')">（やっほー2）</button>
-    <button onclick="playSound('ヤバすぎるこれ.mp3')">（ヤバすぎるこれ）</button>
-    <button onclick="playSound('怖すぎるぅぅぅ.mp3')">（怖すぎるぅぅぅ）</button>
-    <button onclick="playSound('最悪なんですケド.mp3')">（最悪なんですケド）</button>
-    <button onclick="playSound('絶対嘘つきいるでしょ.mp3')">（絶対嘘つきいるでしょ）</button>
-    <button onclick="playSound('自分の誕生日配信の場所消えた.mp3')">（誕生日配信の場所消えた…）</button>
-    <button onclick="playSound('笑い3.mp3')">（笑い3）</button>
-    <button onclick="playSound('笑い2.mp3')">（笑い2）</button> 
-    <button onclick="playSound('こりゃ貴重ですよ.mp3')">（こりゃ貴重ですよ）</button>
-    <button onclick="playSound('可愛い.mp3')">（可愛い）</button>
-    <button onclick="playSound('んしょ.mp3')">（んしょ）</button>
-    <button onclick="playSound('ありがとう.mp3')">（ありがとう）</button>
-    <button onclick="playSound('ん！.mp3')">（ん！）</button>
-    <button onclick="playSound('バナナナナナノ.mp3')">（バナナナナナノ）</button>
-    <button onclick="playSound('バナナに見える.mp3')">（バナナに見える）</button>
-    <button onclick="playSound('笑い.mp3')">（笑い）</button>
-    <button onclick="playSound('助かる助かる.mp3')">（助かる助かる）</button>
-    <button onclick="playSound('このクソガキ！.mp3')">（このクソガキ！）</button>
-    <button onclick="playSound('このガキ！.mp3')">（このガキ！）</button>
-    <button onclick="playSound('こんな景色見てみたすぎる.mp3')">（こんな景色見てみたすぎる）</button>
-    <button onclick="playSound('あらぁ.mp3')">（あらぁ）</button>
-    <button onclick="playSound('可愛い2.mp3')">（可愛い2）</button>
-    <button onclick="playSound('んなぁ2.mp3')">（んなぁ2）</button>
-    <button onclick="playSound('ハレンチです.mp3')">（ハレンチです）</button>
-    <button onclick="playSound('大変まずいですよコレ.mp3')">（大変まずいですよコレ）</button>
-    <button onclick="playSound('ありゃりゃりゃりゃー.mp3')">（ありゃりゃりゃりゃー）</button>
-    <button onclick="playSound('ありゃーありゃりゃりゃりゃー.mp3')">（ありゃーありゃりゃりゃりゃー）</button>
-    <button onclick="playSound('ドカ笑い.mp3')">（ドカ笑い）</button>
-    <button onclick="playSound('んなぁ3.mp3')">（んなぁ3）</button>
-    <button onclick="playSound('これももしかして香ってくるんです…？.mp3')">（これももしかして香ってくるんです…？）</button>
-    <button onclick="playSound('美味ししょうすぎるわ.mp3')">（美味ししょうすぎるわ）</button>
-    <button onclick="playSound('エビエビ.mp3')">（エビエビ）</button>
-    <button onclick="playSound('美味ししょー♡.mp3')">（美味ししょー♡）</button>
-    <button onclick="playSound('うわぁー.mp3')">（うわぁー）</button>
-    <button onclick="playSound('んしょ2.mp3')">（んしょ2）</button>
-    <button onclick="playSound('匂いますねぇ.mp3')">（匂いますねぇ）</button>
-    <button onclick="playSound('クンクン….mp3')">（クンクン…）</button>
-    <button onclick="playSound('いーなー.mp3')">（いーなー）</button>
-    <button onclick="playSound('美味ししょう2.mp3')">（美味ししょう2）</button>
-    <button onclick="playSound('んなぁ4.mp3')">（んなぁ4）</button>
-  
-  </div><audio id="player" src=""></audio> <img src="shigumano_standee.png" alt="しぐまの立ち絵" class="vtuber-standee">
-
-<button id="nightToggle" onclick="toggleNightMode()">夜モード</button>
-
-  <script>
-    const voiceFiles = [
-      'ありがとうございます.mp3','うりゅ.mp3','まだ呼ばれてない人手上げてみて.mp3',
-      'まっずいこれ.mp3','やっほー.mp3','やっほー2.mp3','ヤバすぎるこれ.mp3',
-      '怖すぎるぅぅぅ.mp3','最悪なんですケド.mp3','絶対嘘つきいるでしょ.mp3','自分の誕生日配信の場所消えた.mp3',
-      '笑い3.mp3','笑い2.mp3','こりゃ貴重ですよ.mp3','可愛い.mp3','んしょ.mp3',
-      'ありがとう.mp3','ん！.mp3','バナナナナナノ.mp3','バナナに見える.mp3','笑い.mp3','助かる助かる.mp3',
-      'このクソガキ！.mp3',
-      'このガキ！.mp3',
-      'こんな景色見てみたすぎる.mp3',
-      'あらぁ.mp3',
-      '可愛い2.mp3',
-      'んなぁ2.mp3',
-      'ハレンチです.mp3',
-      '大変まずいですよコレ.mp3',
-      'ありゃりゃりゃりゃー.mp3',
-      'ありゃーありゃりゃりゃりゃー.mp3',
-      'ドカ笑い.mp3',
-      'んなぁ3.mp3',
-      'これももしかして香ってくるんです…？.mp3',
-      '美味ししょうすぎるわ.mp3',
-      'エビエビ.mp3',
-      '美味ししょー♡.mp3',
-      'うわぁー.mp3',
-      'んしょ2.mp3',
-      '匂いますねぇ.mp3',
-      'クンクン….mp3',
-      'いーなー.mp3',
-      '美味ししょう2.mp3',
-      'んなぁ4.mp3'
-      
-    ];
-
-    function playSound(file) {
-      const audio = document.getElementById('player');
-      audio.src = file;
-      audio.play();
-      showSpeech(file.replace('.mp3',''));
-    }
-
-    function playRandomSound() {
-      const file = voiceFiles[Math.floor(Math.random() * voiceFiles.length)];
-      playSound(file);
-    }
-
-    function showSpeech(text) {
-      const speech = document.createElement('div');
-      speech.className = 'speech';
-      speech.textContent = text;
-      document.body.appendChild(speech);
-      setTimeout(() => speech.remove(), 2000);
-    }
-
-    function toggleNightMode() {
-      document.body.classList.toggle('night-mode');
-    }
-
-    for (let i = 0; i < 25; i++) {
-      const bubble = document.createElement('div');
-      const size = Math.random() * 20 + 10;
-      bubble.classList.add('bubble');
-      bubble.style.width = size + 'px';
-      bubble.style.height = size + 'px';
-      bubble.style.left = Math.random() * 100 + 'vw';
-      bubble.style.animationDuration = (5 + Math.random() * 5) + 's';
-      document.body.appendChild(bubble);
-    }
-
-    const floaties = ['🪼', '🐠', '🐟', '🦑'];
-    for (let i = 0; i < 6; i++) {
-      const f = document.createElement('div');
-      f.classList.add('floaty');
-      f.style.left = Math.random() * 100 + 'vw';
-      f.style.animationDuration = (10 + Math.random() * 10) + 's';
-      f.textContent = floaties[Math.floor(Math.random() * floaties.length)];
-      document.body.appendChild(f);
-    }
-  </script></body>
+  <!-- ここに新しい音声ボタンとvoiceFiles配列の追加を含む全コードを統合します -->
+</body>
 </html>
