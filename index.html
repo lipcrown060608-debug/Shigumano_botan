@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="ja">  <head>  
-  <meta charset="UTF-8">  
+<!DOCTYPE html><html lang="ja">  <head>    <meta charset="UTF-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1">  
   <title>しぐまのボタン</title>  
   <style>  
@@ -15,358 +14,171 @@
       overflow-y: auto;  
       cursor: url('https://cdn-icons-png.flaticon.com/32/210/210545.png') 5 2, auto;  
       transition: background 1s;  
-    }.night-mode {  
-  background: linear-gradient(180deg, #0a0a23, #1f3a93);  
-  color: #fff;  
-}  @keyframes wave {
-0% { background-position: 0% 0%; }
-50% { background-position: 0% 100%; }
-100% { background-position: 0% 0%; }
-}
-
-h1 {
-font-size: 32px;
-color: #cc6699;
-margin-bottom: 10px;
-text-shadow: 1px 1px 2px white;
+    }
+    .night-mode {  
+      background: linear-gradient(180deg, #0a0a23, #1f3a93);  
+      color: #fff;  
+    }  
+    @keyframes wave {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
+    }h1 {
+  font-size: 32px;
+  color: #cc6699;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px white;
 }
 
 p.update-date {
-font-size: 14px;
-color: #777;
-margin-top: -10px;
-margin-bottom: 20px;
+  font-size: 14px;
+  color: #777;
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 .vtuber-icon {
-width: 120px;
-height: 120px;
-border-radius: 50%;
-object-fit: cover;
-border: 3px solid white;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-margin-bottom: 15px;
-z-index: 2;
-cursor: pointer;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .vtuber-standee {
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-width: 220px;
-opacity: 0.95;
-animation: float 6s ease-in-out infinite;
-pointer-events: none;
-z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  opacity: 0.95;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes float {
-0%, 100% { transform: translateX(-50%) translateY(0); }
-50% { transform: translateX(-50%) translateY(-10px); }
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
 }
 
 .button-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 16px;
-padding: 0 10px;
-max-width: 100%;
-box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 10px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 button {
-font-size: 16px;
-padding: 14px 20px;
-background: linear-gradient(135deg, #ff99cc, #ff66b2);
-color: white;
-border: none;
-border-radius: 30px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-cursor: pointer;
-transition: transform 0.2s ease, box-shadow 0.3s ease;
-width: 100%;
-max-width: 200px;
+  font-size: 16px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #ff99cc, #ff66b2);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 200px;
 }
 
 button:hover {
-transform: scale(1.1);
-box-shadow: 0 0 15px rgba(255, 182, 193, 0.9);
-}
-
-.bubble {
-position: absolute;
-bottom: -50px;
-background: rgba(255, 255, 255, 0.6);
-border-radius: 50%;
-animation: rise 10s linear infinite;
-opacity: 0.7;
-pointer-events: none;
-z-index: 0;
-}
-
-@keyframes rise {
-0% {
-transform: translateY(0) scale(1);
-opacity: 0.7;
-}
-100% {
-transform: translateY(-100vh) scale(0.5);
-opacity: 0;
-}
-}
-
-.floaty {
-position: absolute;
-bottom: -60px;
-font-size: 40px;
-animation: floatUp linear infinite;
-pointer-events: none;
-z-index: 1;
-opacity: 0.9;
-}
-
-@keyframes floatUp {
-0% {
-transform: translateY(0) translateX(0) rotate(0deg);
-}
-50% {
-transform: translateY(-50vh) translateX(10px) rotate(5deg);
-}
-100% {
-transform: translateY(-100vh) translateX(-10px) rotate(-5deg);
-opacity: 0;
-}
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.9);
 }
 
 .speech {
-position: absolute;
-top: 20%;
-left: 50%;
-transform: translateX(-50%);
-background: rgba(255,255,255,0.85);
-border-radius: 12px;
-padding: 10px 18px;
-font-size: 18px;
-color: #333;
-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-opacity: 0;
-animation: fadeSpeech 2s forwards;
-pointer-events: none;
-z-index: 5;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: fadeSpeech 2s forwards;
+  pointer-events: none;
+  z-index: 5;
 }
 
 @keyframes fadeSpeech {
-0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
-20% { opacity: 1; }
-80% { opacity: 1; }
-100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }
 
 #nightToggle {
-position: fixed;
-bottom: 20px;
-right: 20px;
-z-index: 10;
-padding: 10px 20px;
-border-radius: 20px;
-border: none;
-background: #444;
-color: white;
-font-size: 14px;
-cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #444;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-  </style>  
-</head>  
-<body>  
-  <h1>しぐまのボタン</h1>  
-  <p class="update-date">最終更新日：2025年8月2日</p>  
-  <p>アイコンを押すとランダムでボイスが再生されるよ！</p>  
-  <img src="shigumano_icon.png.jpg" alt="しぐまのアイコン" class="vtuber-icon" onclick="playRandomSound()">  <div class="button-container">  
-    <button onclick="playSound('ありがとうございます.mp3')">（ありがとうございます）</button>  
-    <button onclick="playSound('うりゅ.mp3')">（うりゅ）</button>  
-    <button onclick="playSound('まだ呼ばれてない人手上げてみて.mp3')">（まだ呼ばれてない人手上げて）</button>  
-    <button onclick="playSound('まっずいこれ.mp3')">（まっずいこれ）</button>  
-    <button onclick="playSound('やっほー.mp3')">（やっほー）</button>  
-    <button onclick="playSound('やっほー2.mp3')">（やっほー2）</button>  
-    <button onclick="playSound('ヤバすぎるこれ.mp3')">（ヤバすぎるこれ）</button>  
-    <button onclick="playSound('怖すぎるぅぅぅ.mp3')">（怖すぎるぅぅぅ）</button>  
-    <button onclick="playSound('最悪なんですケド.mp3')">（最悪なんですケド）</button>  
-    <button onclick="playSound('絶対嘘つきいるでしょ.mp3')">（絶対嘘つきいるでしょ）</button>  
-    <button onclick="playSound('自分の誕生日配信の場所消えた.mp3')">（誕生日配信の場所消えた…）</button>  
-    <button onclick="playSound('笑い3.mp3')">（笑い3）</button>  
-    <button onclick="playSound('笑い2.mp3')">（笑い2）</button>   
-    <button onclick="playSound('こりゃ貴重ですよ.mp3')">（こりゃ貴重ですよ）</button>  
-    <button onclick="playSound('可愛い.mp3')">（可愛い）</button>  
-    <button onclick="playSound('んしょ.mp3')">（んしょ）</button>  
-    <button onclick="playSound('ありがとう.mp3')">（ありがとう）</button>  
-    <button onclick="playSound('ん！.mp3')">（ん！）</button>  
-    <button onclick="playSound('バナナナナナノ.mp3')">（バナナナナナノ）</button>  
-    <button onclick="playSound('バナナに見える.mp3')">（バナナに見える）</button>  
-    <button onclick="playSound('笑い.mp3')">（笑い）</button>  
-    <button onclick="playSound('助かる助かる.mp3')">（助かる助かる）</button>  
-    <button onclick="playSound('このクソガキ！.mp3')">（このクソガキ！）</button>  
-    <button onclick="playSound('このガキ！.mp3')">（このガキ！）</button>  
-    <button onclick="playSound('こんな景色見てみたすぎる.mp3')">（こんな景色見てみたすぎる）</button>  
-    <button onclick="playSound('あらぁ.mp3')">（あらぁ）</button>  
-    <button onclick="playSound('可愛い2.mp3')">（可愛い2）</button>  
-    <button onclick="playSound('んなぁ2.mp3')">（んなぁ2）</button>  
-    <button onclick="playSound('ハレンチです.mp3')">（ハレンチです）</button>  
-    <button onclick="playSound('大変まずいですよコレ.mp3')">（大変まずいですよコレ）</button>  
-    <button onclick="playSound('ありゃりゃりゃりゃー.mp3')">（ありゃりゃりゃりゃー）</button>  
-    <button onclick="playSound('ありゃーありゃりゃりゃりゃー.mp3')">（ありゃーありゃりゃりゃりゃー）</button>  
-    <button onclick="playSound('ドカ笑い.mp3')">（ドカ笑い）</button>  
-    <button onclick="playSound('んなぁ3.mp3')">（んなぁ3）</button>  
-    <button onclick="playSound('これももしかして香ってくるんですか？.mp3')">（これももしかして香ってくるんですか？）</button>  
-    <button onclick="playSound('美味ししょうすぎるわ.mp3')">（美味ししょうすぎるわ）</button>  
-    <button onclick="playSound('エビエビ.mp3')">（エビエビ）</button>  
-    <button onclick="playSound('美味ししょー♡.mp3')">（美味ししょー♡）</button>  
-    <button onclick="playSound('うわぁー.mp3')">（うわぁー）</button>  
-    <button onclick="playSound('んしょ2.mp3')">（んしょ2）</button>  
-    <button onclick="playSound('匂いますねぇ.mp3')">（匂いますねぇ）</button>  
-    <button onclick="playSound('クンクン….mp3')">（クンクン…）</button>  
-    <button onclick="playSound('いーなー.mp3')">（いーなー）</button>  
-    <button onclick="playSound('美味ししょう2.mp3')">（美味ししょう2）</button>  
-    <button onclick="playSound('んなぁ4.mp3')">（んなぁ4）</button>    </div><audio id="player" src=""></audio> <img src="shigumano_standee.png" alt="しぐまの立ち絵" class="vtuber-standee">  <button id="nightToggle" onclick="toggleNightMode()">夜モード</button>
-    <button onclick="playSound('何この顔.mp3')">（何この顔）</button>
-    <button onclick="playSound('可愛い(2).mp3')">（可愛い(2)）</button>
-    <button onclick="playSound('可愛すぎなんですケド.mp3')">（可愛すぎなんですケド）</button>
-    <button onclick="playSound('あらあら.mp3')">（あらあら）</button>
-    <button onclick="playSound('猫を見つけたしぐまの.mp3')">（猫を見つけたしぐまの）</button>
-    <button onclick="playSound('猫がみたいしぐまの.mp3')">（猫がみたいしぐまの）</button>
-    <button onclick="playSound('んなぁ.mp3')">（んなぁ）</button>
-    <button onclick="playSound('すいません(2).mp3')">（すいません(2)）</button>
-    <button onclick="playSound('すいません.mp3')">（すいません）</button>
-    <button onclick="playSound('絶対汚いじゃん.mp3')">（絶対汚いじゃん）</button>
-    <button onclick="playSound('馬倒されて気持ちよくなる意味が分からないmp3')">（馬倒されて気持ちよくなる意味が分からない）</button>
-    <button onclick="playSound('確かに.mp3')">（確かに）</button>
-    <button onclick="playSound('なんか目覚めちゃうかもしれない.mp3')">（なんか目覚めちゃうかもしれない）</button>
-    <button onclick="playSound('最悪すぎる.mp3')">（最悪すぎる）</button>
-    <button onclick="playSound('ぷーい.mp3')">（ぷーい）</button>
-    <button onclick="playSound('まぁそうだねー.mp3')">（まぁそうだねー）</button>
-    <button onclick="playSound('ありがたいことです.mp3')">（ありがたいことです）</button>
-    <button onclick="playSound('更新更新更新！.mp3')">（更新更新更新！）</button>
-    <button onclick="playSound('いいですね.mp3')">（いいですね）</button>
-    <button onclick="playSound('笑い(2).mp3')">（笑い(2)）</button>
-    <button onclick="playSound('ありがとう(2).mp3')">（ありがとう(2)）</button>
-    <button onclick="playSound('嘘つけ.mp3')">（嘘つけ）</button>
-    <button onclick="playSound('good evening.mp3')">（good evening）</button>
-    <button onclick="playSound('自分もやったことある、分かるよ.mp3')">（自分もやったことある、分かるよ）</button>
-    <button onclick="playSound('バカ.mp3')">（バカ）</button>
-    <button onclick="playSound('ありがとうセンキュ.mp3')">（ありがとうセンキュ）</button>
-    <button onclick="playSound('お大事に.mp3')">（お大事に）</button>
-    <button onclick="playSound('そうですよねすみません.mp3')">（そうですよねすみません）</button>
-    <button onclick="playSound('来てくれてありがとう.mp3')">（来てくれてありがとう）</button>
+  </style>
+</head>
+<body>
+  <h1>しぐまのボタン</h1>
+  <p class="update-date">最終更新日：2025年8月5日</p>
+  <p>アイコンを押すとランダムでボイスが再生されるよ！</p>
+  <img src="shigumano_icon.png.jpg" alt="しぐまのアイコン" class="vtuber-icon" onclick="playRandomSound()">
+  <div class="button-container" id="buttons"></div>
+  <audio id="player" src=""></audio>
+  <img src="shigumano_standee.png" alt="しぐまの立ち絵" class="vtuber-standee">
+  <button id="nightToggle" onclick="toggleNightMode()">夜モード</button>  <script>
+    const voiceFiles = [
+      'ありがとうございます.mp3','うりゅ.mp3','まだ呼ばれてない人手上げてみて.mp3','まっずいこれ.mp3','やっほー.mp3','やっほー2.mp3','ヤバすぎるこれ.mp3','怖すぎるぅぅぅ.mp3','最悪なんですケド.mp3','絶対嘘つきいるでしょ.mp3','自分の誕生日配信の場所消えた.mp3','笑い3.mp3','笑い2.mp3','こりゃ貴重ですよ.mp3','可愛い.mp3','んしょ.mp3','ありがとう.mp3','ん！.mp3','バナナナナナノ.mp3','バナナに見える.mp3','笑い.mp3','助かる助かる.mp3','このクソガキ！.mp3','このガキ！.mp3','こんな景色見てみたすぎる.mp3','あらぁ.mp3','可愛い2.mp3','んなぁ2.mp3','ハレンチです.mp3','大変まずいですよコレ.mp3','ありゃりゃりゃりゃー.mp3','ありゃーありゃりゃりゃりゃー.mp3','ドカ笑い.mp3','んなぁ3.mp3','これももしかして香ってくるんですか？.mp3','美味ししょうすぎるわ.mp3','エビエビ.mp3','美味ししょー♡.mp3','うわぁー.mp3','んしょ2.mp3','匂いますねぇ.mp3','クンクン….mp3','いーなー.mp3','美味ししょう2.mp3','んなぁ4.mp3','何この顔.mp3','可愛い(2).mp3','可愛すぎなんですケド.mp3','あらあら.mp3','猫を見つけたしぐまの.mp3','猫がみたいしぐまの.mp3','んなぁ.mp3','すいません(2).mp3','すいません.mp3','絶対汚いじゃん.mp3','馬倒されて気持ちよくなる意味が分からない.mp3','確かに.mp3','なんか目覚めちゃうかもしれない.mp3','最悪すぎる.mp3','ぷーい.mp3','まぁそうだねー.mp3','ありがたいことです.mp3','更新更新更新！.mp3','いいですね.mp3','笑い(2).mp3','ありがとう(2).mp3','嘘つけ.mp3','good evening.mp3','自分もやったことある、分かるよ.mp3','バカ.mp3','ありがとうセンキュ.mp3','お大事に.mp3','そうですよねすみません.mp3','来てくれてありがとう.mp3'
+    ];
 
+    function playSound(file) {
+      const audio = document.getElementById('player');
+      audio.src = file;
+      audio.play();
+      showSpeech(file.replace('.mp3',''));
+    }
 
+    function playRandomSound() {
+      const file = voiceFiles[Math.floor(Math.random() * voiceFiles.length)];
+      playSound(file);
+    }
 
+    function showSpeech(text) {
+      const speech = document.createElement('div');
+      speech.className = 'speech';
+      speech.textContent = text;
+      document.body.appendChild(speech);
+      setTimeout(() => speech.remove(), 2000);
+    }
 
-  <script>  
-    const voiceFiles = [  
-      'ありがとうございます.mp3','うりゅ.mp3','まだ呼ばれてない人手上げてみて.mp3',  
-      'まっずいこれ.mp3','やっほー.mp3','やっほー2.mp3','ヤバすぎるこれ.mp3',  
-      '怖すぎるぅぅぅ.mp3','最悪なんですケド.mp3','絶対嘘つきいるでしょ.mp3','自分の誕生日配信の場所消えた.mp3',  
-      '笑い3.mp3','笑い2.mp3','こりゃ貴重ですよ.mp3','可愛い.mp3','んしょ.mp3',  
-      'ありがとう.mp3','ん！.mp3','バナナナナナノ.mp3','バナナに見える.mp3','笑い.mp3','助かる助かる.mp3',  
-      'このクソガキ！.mp3',  
-      'このガキ！.mp3',  
-      'こんな景色見てみたすぎる.mp3',  
-      'あらぁ.mp3',  
-      '可愛い2.mp3',  
-      'んなぁ2.mp3',  
-      'ハレンチです.mp3',  
-      '大変まずいですよコレ.mp3',  
-      'ありゃりゃりゃりゃー.mp3',  
-      'ありゃーありゃりゃりゃりゃー.mp3',  
-      'ドカ笑い.mp3',  
-      'んなぁ3.mp3',  
-      'これももしかして香ってくるんですか？.mp3',  
-      '美味ししょうすぎるわ.mp3',  
-      'エビエビ.mp3',  
-      '美味ししょー♡.mp3',  
-      'うわぁー.mp3',  
-      'んしょ2.mp3',  
-      '匂いますねぇ.mp3',  
-      'クンクン….mp3',  
-      'いーなー.mp3',  
-      '美味ししょう2.mp3',  
-      'んなぁ4.mp3'  
-      '何この顔.mp3',
-      '可愛い(2).mp3',
-      '可愛すぎなんですケド.mp3',
-      'あらあら.mp3',
-      '猫を見つけたしぐまの.mp3',
-      '猫がみたいしぐまの.mp3',
-      'んなぁ.mp3',
-      'すいません(2).mp3',
-      'すいません.mp3',
-      '絶対汚いじゃん.mp3',
-      '馬倒されて気持ちよくなる意味が分からないmp3',
-      '確かに.mp3',
-      'なんか目覚めちゃうかもしれない.mp3',
-      '最悪すぎる.mp3',
-      'ぷーい.mp3',
-      'まぁそうだねー.mp3',
-      'ありがたいことです.mp3',
-      '更新更新更新！.mp3',
-      'いいですね.mp3',
-      '笑い(2).mp3',
-      'ありがとう(2).mp3',
-      '嘘つけ.mp3',
-      'good evening.mp3',
-      '自分もやったことある、分かるよ.mp3',
-      'バカ.mp3',
-      'ありがとうセンキュ.mp3',
-      'お大事に.mp3',
-      'そうですよねすみません.mp3',
-      '来てくれてありがとう.mp3' 
-    ];  
-  
-    function playSound(file) {  
-      const audio = document.getElementById('player');  
-      audio.src = file;  
-      audio.play();  
-      showSpeech(file.replace('.mp3',''));  
-    }  
-  
-    function playRandomSound() {  
-      const file = voiceFiles[Math.floor(Math.random() * voiceFiles.length)];  
-      playSound(file);  
-    }  
-  
-    function showSpeech(text) {  
-      const speech = document.createElement('div');  
-      speech.className = 'speech';  
-      speech.textContent = text;  
-      document.body.appendChild(speech);  
-      setTimeout(() => speech.remove(), 2000);  
-    }  
-  
-    function toggleNightMode() {  
-      document.body.classList.toggle('night-mode');  
-    }  
-  
-    for (let i = 0; i < 25; i++) {  
-      const bubble = document.createElement('div');  
-      const size = Math.random() * 20 + 10;  
-      bubble.classList.add('bubble');  
-      bubble.style.width = size + 'px';  
-      bubble.style.height = size + 'px';  
-      bubble.style.left = Math.random() * 100 + 'vw';  
-      bubble.style.animationDuration = (5 + Math.random() * 5) + 's';  
-      document.body.appendChild(bubble);  
-    }  
-  
-    const floaties = ['🪼', '🐠', '🐟', '🦑'];  
-    for (let i = 0; i < 6; i++) {  
-      const f = document.createElement('div');  
-      f.classList.add('floaty');  
-      f.style.left = Math.random() * 100 + 'vw';  
-      f.style.animationDuration = (10 + Math.random() * 10) + 's';  
-      f.textContent = floaties[Math.floor(Math.random() * floaties.length)];  
-      document.body.appendChild(f);  
-    }  
-  </script></body>  </html>
+    function toggleNightMode() {
+      document.body.classList.toggle('night-mode');
+    }
+
+    // ボタンの自動生成
+    const buttonContainer = document.getElementById('buttons');
+    voiceFiles.forEach(file => {
+      const button = document.createElement('button');
+      button.textContent = '（' + file.replace('.mp3','') + '）';
+      button.onclick = () => playSound(file);
+      buttonContainer.appendChild(button);
+    });
+  </script></body>
+</html>
